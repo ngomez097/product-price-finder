@@ -6,5 +6,5 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 public interface FindProductPriceUseCase {
-    Optional<ProductPrice> findProductPrice(LocalDateTime date, int brandId, int productId);
+    Optional<ProductPrice> findProductPrice(int productId, int brandId, LocalDateTime applicationDate);
 }

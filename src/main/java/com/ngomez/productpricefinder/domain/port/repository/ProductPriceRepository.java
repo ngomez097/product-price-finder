@@ -3,8 +3,8 @@ package com.ngomez.productpricefinder.domain.port.repository;
 import com.ngomez.productpricefinder.domain.model.ProductPrice;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
+import java.util.List;
 
 public interface ProductPriceRepository {
-    Optional<ProductPrice> findProductPriceOrderByPriorityDesc(LocalDateTime date, int brandId, int productId);
+    List<ProductPrice> findProductsPriceOrderByPriorityDesc(int productId, int brandId, LocalDateTime applicationDate);
 }
