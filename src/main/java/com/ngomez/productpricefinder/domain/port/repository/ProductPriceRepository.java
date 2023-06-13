@@ -1,6 +1,6 @@
-package com.ngomez.price_finder.domain.port.repository;
+package com.ngomez.productpricefinder.domain.port.repository;
 
-import com.ngomez.price_finder.domain.model.ProductPrice;
+import com.ngomez.productpricefinder.domain.model.ProductPrice;
 
 import java.time.LocalDateTime;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.ngomez.price_finder.domain.model;
+package com.ngomez.productpricefinder.domain.model;
 
 import lombok.Builder;
 import lombok.Getter;

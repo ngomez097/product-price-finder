@@ -1,4 +1,4 @@
-package com.ngomez.price_finder;
+package com.ngomez.productpricefinder;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
