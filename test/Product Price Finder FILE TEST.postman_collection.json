@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "003a95de-6046-470d-bc9a-3dbcd8a32166",
+		"name": "Product Price Finder File",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22790164"
+	},
+	"item": [
+		{
+			"name": "Product Price Finder Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Test - Price is correct\", function () {",
+							"    const body = pm.response.json();",
+							"    ",
+							"    pm.expect(body.price).to.eql(pm.iterationData.get(\"expectedPrice\"));",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/products/:product_id/price?application_date={{applicationDate}}&brand_id={{brandId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"products",
+						":product_id",
+						"price"
+					],
+					"query": [
+						{
+							"key": "application_date",
+							"value": "{{applicationDate}}"
+						},
+						{
+							"key": "brand_id",
+							"value": "{{brandId}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "product_id",
+							"value": "{{productId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
