@@ -40,6 +40,12 @@ mvnw.cmd test #Windows
 - [Mockito](https://site.mockito.org/)
 - [JUnit 5](https://junit.org/junit5/)
 - [MapStruct](https://mapstruct.org/)
+- [Maven](https://maven.apache.org/)
+
+## Herramientas
+
+- [IntelliJ](https://www.jetbrains.com/es-es/idea/)
+- [OpenApi Generator](https://openapi-generator.tech/)
 
 
 
@@ -47,6 +53,7 @@ mvnw.cmd test #Windows
 
 - Se establece que la moneda guardada en la base de datos en el campo `currency`
   de la tabla `price` respetará la nomenclatura [ISO 4217](https://es.wikipedia.org/wiki/ISO_4217)
+- Se considera que todos los parámetros de la request son requeridos
 
 
 
@@ -56,3 +63,4 @@ mvnw.cmd test #Windows
 - Se optó por usar `Lombok` en los modelos de dominio para mejorar la legibilidad
 - Se optó por usar la etiqueta `@Query` de JPA con `JPQL` para evitar tener un **Query Method** muy extenso
   con parámetros repetidos
+- Se utilizó **OpenApi Generator** para crear el endpoint a partir de un YAML de especificación OpenAPI

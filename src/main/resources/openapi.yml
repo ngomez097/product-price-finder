@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info:
+  title: Product price finder
+  version: '1.0'
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  '/products/{product_id}/price':
+    parameters:
+      - schema:
+          type: string
+        name: product_id
+        in: path
+        required: true
+    get:
+      summary:  Retrieve a product price
+      tags: []
+      responses:
+        '200':
+          description: Price Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductPrice'
+      operationId: get-product-price
+      description: 'Retrieve the product price by the ''product_id'', ''brand_id'' and ''application_date'' parameters'
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: brand_id
+          required: true
+          description: The specific brand identifier
+        - schema:
+            type: string
+            format: date-time
+          in: query
+          name: application_date
+          required: true
+          description: The date for the price
+components:
+  schemas:
+    ProductPrice:
+      title: ProductPrice
+      type: object
+      properties:
+        product_id:
+          type: integer
+          description: The product identifier
+        brand_id:
+          type: integer
+          description: The brand identifier
+        start_date:
+          type: string
+          format: date-time
+          description: The date when the price becomes valid
+        end_date:
+          type: string
+          format: date-time
+          description: The date when the price becomes invalid
+        price_list:
+          type: integer
+          format: date
+          description: The price list
+        price:
+          type: number
+          description: The price of the product
+        currency:
+          type: string
+          description: The currency associated with the price
