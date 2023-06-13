@@ -37,6 +37,9 @@ mvnw.cmd test #Windows
 - [Flyway](https://flywaydb.org/)
 - [H2 Database](https://www.h2database.com/html/main.html)
 - [Lombok](https://projectlombok.org/)
+- [Mockito](https://site.mockito.org/)
+- [JUnit 5](https://junit.org/junit5/)
+- [MapStruct](https://mapstruct.org/)
 
 
 
@@ -50,4 +53,6 @@ mvnw.cmd test #Windows
 ## Decisiones
 
 - Se usará TDD como metodología de desarrollo
-- Se optó por usar `Lombok` como en los modelos de dominio para mejorar la legibilidad
+- Se optó por usar `Lombok` en los modelos de dominio para mejorar la legibilidad
+- Se optó por usar la etiqueta `@Query` de JPA con `JPQL` para evitar tener un **Query Method** muy extenso
+  con parámetros repetidos
