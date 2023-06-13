@@ -36,6 +36,7 @@ mvnw.cmd test #Windows
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 - [Flyway](https://flywaydb.org/)
 - [H2 Database](https://www.h2database.com/html/main.html)
+- [Lombok](https://projectlombok.org/)
 
 
 
@@ -49,3 +50,4 @@ mvnw.cmd test #Windows
 ## Decisiones
 
 - Se usará TDD como metodología de desarrollo
+- Se optó por usar `Lombok` como en los modelos de dominio para mejorar la legibilidad
