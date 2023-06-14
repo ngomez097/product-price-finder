@@ -11,18 +11,17 @@ identificador de cadena y el identificador del producto utilizando arquitectura 
 
 
 ## Indice
-* [Product price finder](#product-price-finder)
-  * [Dependencias](#dependencias)
-  * [Tecnologías](#tecnologías)
-  * [Herramientas](#herramientas)
-  * [Iniciar el servidor](#iniciar-el-servidor)
-  * [Swagger](#swagger)
-  * [Consideraciones](#consideraciones)
-  * [Decisiones](#decisiones)
-  * [Test unitarios](#test-unitarios)
-  * [Pruebas de integración](#pruebas-de-integración)
-    * [Maven](#maven)
-    * [Postman](#postman)
+* [Dependencias](#dependencias)
+* [Tecnologías](#tecnologías)
+* [Herramientas](#herramientas)
+* [Iniciar el servidor](#iniciar-el-servidor)
+* [Swagger](#swagger)
+* [Consideraciones](#consideraciones)
+* [Decisiones](#decisiones)
+* [Test unitarios](#test-unitarios)
+* [Pruebas de integración](#pruebas-de-integración)
+  * [Maven](#maven)
+  * [Postman](#postman)
 
 ## Dependencias
 
