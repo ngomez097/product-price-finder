@@ -312,6 +312,124 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Test #6 - Missing parameter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Test #6 - detail contains missing parameter \", function () {",
+							"    const body = pm.response.json();",
+							"    ",
+							"    pm.expect(body.detail).to.contain('brand_id');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/products/:product_id/price?application_date=2020-06-16T21:00:00",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"products",
+						":product_id",
+						"price"
+					],
+					"query": [
+						{
+							"key": "application_date",
+							"value": "2020-06-16T21:00:00"
+						}
+					],
+					"variable": [
+						{
+							"key": "product_id",
+							"value": "35455"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test #7 - Bad parameter type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Test #7 - detail contains bad parameter name \", function () {",
+							"    const body = pm.response.json();",
+							"    ",
+							"    pm.expect(body.detail).to.contain('application_date');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/products/:product_id/price?application_date=2020-06-14 00:00:00&brand_id=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"products",
+						":product_id",
+						"price"
+					],
+					"query": [
+						{
+							"key": "application_date",
+							"value": "2020-06-14 00:00:00"
+						},
+						{
+							"key": "brand_id",
+							"value": "1"
+						}
+					],
+					"variable": [
+						{
+							"key": "product_id",
+							"value": "35455"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [

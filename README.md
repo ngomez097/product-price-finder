@@ -132,9 +132,10 @@ los precios esperados por la API
  Para correr los test en Postman se puede hacer uso de una de las dos colecciones creadas en la carpeta
  `test` que se encuentra en la raíz del proyecto, 
  
-- La colección `Product Price Finder` contiene todos los test separados por request
+- La colección `Product Price Finder` contiene todos los test separados por request más unos test para
+  comprobar errores al pasar los parámetros de forma incorrecta
 
 - La colección `Product Price Finder FILE TEST` contiene un único request que utiliza 
-el archivo `test-data.csv` para cargar de 
-[forma parametrizada](https://learning.postman.com/docs/collections/running-collections/working-with-data-files/)
-los datos
+  el archivo `test-data.csv` para cargar de 
+  [forma parametrizada](https://learning.postman.com/docs/collections/running-collections/working-with-data-files/)
+  los datos
