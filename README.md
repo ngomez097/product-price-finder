@@ -46,6 +46,7 @@ identificador de cadena y el identificador del producto utilizando arquitectura 
 
 - [IntelliJ](https://www.jetbrains.com/es-es/idea/)
 - [OpenApi Generator](https://openapi-generator.tech/)
+- [SonarLint Plugin](https://plugins.jetbrains.com/plugin/7973-sonarlint)
 
 
 ## Iniciar el servidor
