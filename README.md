@@ -12,46 +12,17 @@ identificador de cadena y el identificador del producto utilizando arquitectura 
 
 ## Indice
 * [Product price finder](#product-price-finder)
-  * [Ejecutar los test](#ejecutar-los-test)
-  * [Levantar el servidor](#levantar-el-servidor)
   * [Dependencias](#dependencias)
   * [Tecnologías](#tecnologías)
   * [Herramientas](#herramientas)
+  * [Iniciar el servidor](#iniciar-el-servidor)
   * [Swagger](#swagger)
   * [Consideraciones](#consideraciones)
   * [Decisiones](#decisiones)
-  * [Pruebas con Postman](#pruebas-con-postman)
-
-## Ejecutar los test
-
-Para ejecutar los test se debe correr en una terminal dentro de la carpeta del proyecto el 
-siguiente comando
-
-**Linux**
-```bash
-./mvnw test 
-```
-
-**Windows**
-```bash
-mvnw.cmd test
-```
-
-
-## Levantar el servidor
-
-Para levantar el servidor se puede hacer uso del siguiente commando en una terminal
-
-**Linux**
-```bash
-./mvnw spring-boot:run
-```
-
-**Windows**
-```bash
-mvnw.cmd spring-boot:run
-```
-
+  * [Test unitarios](#test-unitarios)
+  * [Pruebas de integración](#pruebas-de-integración)
+    * [Maven](#maven)
+    * [Postman](#postman)
 
 ## Dependencias
 
@@ -77,6 +48,22 @@ mvnw.cmd spring-boot:run
 - [OpenApi Generator](https://openapi-generator.tech/)
 
 
+## Iniciar el servidor
+
+Para iniciar el servidor se puede hacer uso del siguiente commando en una terminal
+
+**Linux**
+```shell
+./mvnw spring-boot:run
+```
+
+**Windows**
+```shell
+mvnw.cmd spring-boot:run
+```
+
+Una vez levantado, el mismo puede ser accedido por el puerto `8080` si se usa la configuración 
+por defecto
 
 ## Swagger
 
@@ -103,7 +90,22 @@ una vez que el [servidor esté corriendo](#levantar-el-servidor)
 - Se utilizó **OpenApi Generator** para crear el endpoint a partir de un YAML de especificación OpenAPI
 
 
-## Pruebas con Postman
+## Test unitarios
+
+Para ejecutar los test unitarios se debe ejecutar en una terminal dentro de la carpeta raíz del 
+proyecto el siguiente comando
+
+**Linux**
+```shell
+./mvnw test 
+```
+
+**Windows**
+```shell
+mvnw.cmd test
+```
+
+## Pruebas de integración
 
 El proyecto está cargado con algunos datos para poder realizar pruebas, siendo estos los siguientes
 
@@ -129,7 +131,18 @@ los precios esperados por la API
 
 ![](doc/test-graph.png)
 
- Para correr los test en Postman se puede hacer uso de una de las dos colecciones creadas en la carpeta
+### Maven
+
+Para correr con Maven las pruebas de integración de la clase `ITProductPriceFinderApiTests` 
+que prueba los casos anteriormente mencionados más un par de validaciones de errores de parámetros, 
+se debe hacer uso del siguiente comando 
+```shell
+./mvnw verify -Pintegration-tests
+```
+
+### Postman
+
+Para correr los test en Postman se puede hacer uso de una de las dos colecciones creadas en la carpeta
  `test` que se encuentra en la raíz del proyecto, 
  
 - La colección `Product Price Finder` contiene todos los test separados por request más unos test para
