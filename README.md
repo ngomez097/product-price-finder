@@ -69,7 +69,7 @@ por defecto
 
 El proyecto cuenta con **Swagger UI**, este mismo se puede acceder a través del enlace
 [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) 
-una vez que el [servidor esté corriendo](#levantar-el-servidor)
+una vez que el [servidor esté iniciado](#iniciar-el-servidor)
 
 
 
@@ -118,7 +118,7 @@ El proyecto está cargado con algunos datos para poder realizar pruebas, siendo 
 
 ![](doc/price-graph.png)
 
-Las pruebas se van a realizar con los datos de la tabla siguiente siendo la última columna
+Las pruebas se van a realizar con los datos de la siguiente tabla, siendo la última columna
 los precios esperados por la API
 
 | Número de Test | product_id | brand_id | application_date    | Precio esperado |
@@ -133,7 +133,7 @@ los precios esperados por la API
 
 ### Maven
 
-Para correr con Maven las pruebas de integración de la clase `ITProductPriceFinderApiTests` 
+Para correr con `Maven` las pruebas de integración de la clase `ITProductPriceFinderApiTests` 
 que prueba los casos anteriormente mencionados más un par de validaciones de errores de parámetros, 
 se debe hacer uso del siguiente comando 
 ```shell
@@ -145,10 +145,10 @@ se debe hacer uso del siguiente comando
 Para correr los test en Postman se puede hacer uso de una de las dos colecciones creadas en la carpeta
  `test` que se encuentra en la raíz del proyecto, 
  
-- La colección `Product Price Finder` contiene todos los test separados por request más unos test para
+- La colección `Product Price Finder.postman_collection.json` contiene todos los test separados por request más unos test para
   comprobar errores al pasar los parámetros de forma incorrecta
 
-- La colección `Product Price Finder FILE TEST` contiene un único request que utiliza 
+- La colección `Product Price Finder FILE TEST.postman_collection.json` contiene un único request que utiliza 
   el archivo `test-data.csv` para cargar de 
   [forma parametrizada](https://learning.postman.com/docs/collections/running-collections/working-with-data-files/)
   los datos
